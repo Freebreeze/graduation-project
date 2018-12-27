@@ -1,0 +1,15 @@
+# 基于B样条四元数曲线的航天器姿态约束重定向规划
+
+[TOC]
+##课程目的
+1. 航天器的再定位策略十分重要，有些航天器需要避免特定的姿态
+
+
+##需要做的事
+1. 文献回顾
+2. 设计旋转轨迹算法
+3. matlab仿真
+4. 写论文
+
+##资料学习
+###论文学习-A General Construction Scheme for Unit Quaternion Curveswith Simple High Order Derivatives
