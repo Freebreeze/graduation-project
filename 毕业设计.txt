@@ -13,3 +13,5 @@
 
 ##资料学习
 ###论文学习-A General Construction Scheme for Unit Quaternion Curveswith Simple High Order Derivatives
+
+基于
