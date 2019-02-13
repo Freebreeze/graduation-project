@@ -1,0 +1,193 @@
+\chapter{Projektmanagement}
+\label{cha:projekt}
+
+\section{Work Breakdown Structure}
+\label{sec:wbs}
+
+\begin{landscape}
+\begin{tikzpicture}[
+  basic/.style   = {draw, text width=2.7cm, align=left, drop shadow, rectangle},
+  root/.style    = {basic, text width=12cm, rounded corners=2pt, thin, align=center, fill=gray90},
+  level 2/.style = {basic, rounded corners=2pt, thin, fill=gray80},
+  level 3/.style = {basic, thin, fill=gray90, text width=2.6cm},
+  level 1/.style={sibling distance=38mm}, edge from parent fork down, 
+  edge from parent/.style={->,draw}, level distance=2.5cm,  >=latex]
+
+% root of the the initial tree, level 1
+\node[root] {\tb{Genauigkeit der Bahnbestimmung von Space Debris-Objekten mittels weltraumgest\"utzter optischer Sensoren}}
+% The first level, as children of the initial tree
+  child {node[level 2] (c1) {\tb{AP~1000} \\ Literatur-recherche}}
+  child {node[level 2] (c2) {\tb{AP~2000} \\ Algorithmus-erstellung}}
+  child {node[level 2] (c3) {\tb{AP~3000} \\ Implementie-rung \& Test}}
+  child {node[level 2] (c4) {\tb{AP~4000} \\ Algorithmus-optimierung}}
+  child {node[level 2] (c5) {\tb{AP~5000} \\ Simulation \\ $~~$}}
+  child {node[level 2] (c6) {\tb{AP~6000} \\ Dokumentation \\ $~~$}};
+
+% The second level, relatively positioned nodes
+\begin{scope}[every node/.style={level 3}, node distance=6pt]
+\node [below=of c1, xshift=10pt] (c11) {\tb{AP~1100} \\ Weltraumm\"ull-problematik};
+\node [below=of c11] (c12) {\tb{AP~1200} \\ Beobachtung von Weltraum-m\"ull};
+\node [below=of c12] (c13) {\tb{AP~1300} \\ Bahnbestim-mung mit optischen Sensoren};
+
+\node [below=of c2, xshift=10pt] (c21) {\tb{AP~2100} \\ Aufbereitung von CCD-Daten in Winkelmessungen};
+\node [below=of c21] (c22) {\tb{AP~2200} \\ Berechnung von Bahnparametern aus optischen Messungen};
+\node [below=of c22] (c23) {\tb{AP~2300} \\ Hilfsalgorith-men};
+
+\node [below=of c3, xshift=10pt] (c31) {\tb{AP~3100} \\ Einarbeitung in PROOF-Schnittstellen};
+\node [below=of c31] (c32) {\tb{AP~3200} \\ Einbinden des Algorithmus als Unterroutine zu PROOF};
+\node [below=of c32] (c33) {\tb{AP~3300} \\ Gesamttest};
+
+\node [below=of c4, xshift=10pt] (c41) {\tb{AP~4100} \\ Verfeinerung der Aufarbeitung der CCD-Daten durch Subpixelinterpolation};
+\node [below=of c41] (c42) {\tb{AP~4200} \\ Verbesserung der Bahnbestimmung durch Erh\"ohung der Anzahl von Objektsignalen};
+
+\node [below=of c5, xshift=10pt] (c51) {\tb{AP~5100} \\ Simulation der Bahnbestimmung mit PROOF unter verschiedenen Randbedingungen};
+\node [below=of c51] (c52) {\tb{AP~5200} \\ Feststellen der erzielbaren Genauigkeit der Bahnbestimmung};
+
+\end{scope}
+
+% lines from each level 1 node to every one of its "children"
+\foreach \value in {1,2,3}
+  \draw[->] (c1.212) |- (c1\value.west);
+
+\foreach \value in {1,2,3}
+  \draw[->] (c2.212) |- (c2\value.west);
+
+\foreach \value in {1,2,3}
+  \draw[->] (c3.212) |- (c3\value.west);
+
+\foreach \value in {1,2}
+  \draw[->] (c4.212) |- (c4\value.west);
+
+\foreach \value in {1,2}
+  \draw[->] (c5.212) |- (c5\value.west);
+  
+\end{tikzpicture}
+\end{landscape}
+
+\section{Zeitplan}
+\label{sec:zeitplan}
+
+\begin{landscape}
+%\noindent\resizebox{\textwidth}{!}{	% Einfügen, falls zu groß
+\begin{ganttchart}[hgrid,
+                   time slot format = isodate, 
+                   x unit=0.28cm,	% Zum komprimieren des Charts in x-Richtung
+                   %y unit chart=0.7cm,
+                   %compress calendar,	% Komprimiert den Chart in der Breite
+                   calendar week text = {Woche~\currentweek},
+                   chart element start border = right,
+                   bar/.append style={fill=blue!40, rounded corners=2pt},
+                   bar incomplete/.append style={fill=blue!10},
+                   bar label node/.append style={align=left, text width=7cm},
+                   group label node/.append style={align=left, text width=8cm},
+                   milestone label node/.append style={align=left, text width=8cm},
+                   bar progress label node/.style={right=2mm},
+                   progress label text = {\pgfmathprintnumber[precision=0, verbatim]{#1}\%},
+                  ]{2013-01-01}{2013-02-23}
+  \gantttitlecalendar{year, month=shortname, week}\\
+  %\gantttitle{2013}{59}\\
+  \ganttgroup{AP 1000: Literaturrecherche}{2013-01-01}{2013-02-01}\\
+  \ganttbar[progress=50]  {AP 1100: Weltraummüllproblematik}{2013-01-01}{2013-01-08}\\
+  \ganttlinkedbar {AP 1200: Beobachtung von Weltraummüll}{2013-01-09}{2013-01-17}\\
+  \ganttlinkedbar {AP 1300: Bahnbestimmung mit optischen Sensoren}{2013-01-17}{2013-02-01}\\
+  %\ganttbar[progress=100]{AP 1300: TEXT}{2013-01-01}{2013-01-30}\\	% Beispiel für Fortschrittsbalken!
+  
+  \ganttgroup{AP 2000: Algorithmuserstellung}{2013-02-02}{2013-02-23}\\
+  \ganttbar  {AP 2100: ...}{2013-02-02}{2013-02-09}\\
+  \ganttbar  {AP 2200: ...}{2013-02-10}{2013-02-19}\\
+  
+  \ganttmilestone{Meilenstein}{2013-02-20}\\
+  
+ \end{ganttchart}
+%}
+\end{landscape}
+
+\section{Work Package Description}
+\label{sec:wpd}
+
+\begin{table}[!h]
+ \begin{center}
+  \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+   \hline
+   \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}\\
+   \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{AP 1100}}\\
+   \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}\\
+   \hline\hline
+   \textbf{Titel} & \multicolumn{2}{p{7cm}||}{\textbf{Genauigkeit der Bahnbestimmung von Space Debris-Objekten mittels weltraumgestützter optischer Sensoren}} 
+& \textbf{Seite:} 1 von 1\\
+   \hline
+   \textbf{Verantwortlicher} & \multicolumn{2}{l||}{Sebastian Stabroth} & \textbf{Version:} 1.0\\
+   \hline
+   \multicolumn{3}{|l||}{} & \textbf{Datum:} 25.06.2003\\
+   \hline\hline
+   \textbf{Beginn} & \multicolumn{2}{l||}{T$_0$} & \\
+   \hline
+   \textbf{Ende} & \multicolumn{2}{l||}{T$_0$+1 Woche} & \textbf{Dauer}: 1 Woche\\
+   \hline\hline
+   \textbf{Bearbeiter} & \multicolumn{3}{l|}{Sebastian Stabroth}\\
+   \hline\hline
+   \multicolumn{4}{|p{150mm}|}{\textbf{Ziele:}}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ Kenntnis über die Weltraummüllumgebung, Bahnbereiche von Space Debris-Populationen, Objektanzahlen und -größen}\\
+   \multicolumn{4}{|p{150mm}|}{}\\
+   \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ Literatur zum Thema Weltraummüll}\\
+   \multicolumn{4}{|p{150mm}|}{}\\
+   \multicolumn{4}{|p{150mm}|}{\textbf{Schnittstellen zu anderen APs:}}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ \textbf{AP~5100} zur Simulation der Bahnbestimmung von Weltraummüll}\\
+   \multicolumn{4}{|p{150mm}|}{}\\
+   \multicolumn{4}{|p{150mm}|}{\textbf{Aufgaben:}}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ Einlesen in die Thematik Weltraummüll}\\
+   \multicolumn{4}{|p{150mm}|}{}\\
+   \multicolumn{4}{|p{150mm}|}{\textbf{Ergebnisse:}}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ Verständnis der Weltraummüllproblematik}\\
+   \hline
+  \end{tabular}
+ \end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[!h]
+ \begin{center}
+  \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+   \hline
+   \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}\\
+   \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{AP 1200}}\\
+   \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}\\
+   \hline\hline
+   \textbf{Titel} & \multicolumn{2}{p{7cm}||}{\textbf{Titel des Arbeitspakets}} & \textbf{Seite:} X von Y\\
+   \hline
+   \textbf{Verantwortlicher} & \multicolumn{2}{l||}{Dein Name} & \textbf{Version:} 1.1\\
+   \hline
+   \multicolumn{3}{|l||}{} & \textbf{Datum:} DD.MM.YYYY\\
+   \hline\hline
+   \textbf{Beginn} & \multicolumn{2}{l||}{T$_0$} & \\
+   \hline
+   \textbf{Ende} & \multicolumn{2}{l||}{T$_0$+X Wochen} & \textbf{Dauer}: X Wochen\\
+   \hline\hline
+   \textbf{Bearbeiter} & \multicolumn{3}{l|}{Dein Name}\\
+   \hline\hline
+   \multicolumn{4}{|p{150mm}|}{\textbf{Ziele:}}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ Ziel 1}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ Ziel 2}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ ...}\\
+   \multicolumn{4}{|p{150mm}|}{}\\
+   \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ Input 1}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ ...}\\
+   \multicolumn{4}{|p{150mm}|}{}\\
+   \multicolumn{4}{|p{150mm}|}{\textbf{Schnittstellen zu anderen APs:}}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ \textbf{AP XXXX} Beschreibung}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ \textbf{AP ....} ...}\\
+   \multicolumn{4}{|p{150mm}|}{}\\
+   \multicolumn{4}{|p{150mm}|}{\textbf{Aufgaben:}}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ Aufgabe 1}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ ...}\\
+   \multicolumn{4}{|p{150mm}|}{}\\
+   \multicolumn{4}{|p{150mm}|}{\textbf{Ergebnisse:}}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ Ergebnis 1}\\
+   \multicolumn{4}{|p{150mm}|}{$\bullet$ ...}\\
+   \hline
+  \end{tabular}
+ \end{center}
+\end{table}

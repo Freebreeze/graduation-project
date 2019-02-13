@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+  \begin{axis}[
+       xlabel = {Anzahl entfernter Objekte pro Mission},
+       ylabel = {Missionskosten in USD/kg (FY14)},
+       xlabel near ticks,
+       ylabel near ticks,
+       xmin   = 2,
+       xmax   = 10,
+       xtick  = {2,4,6,8,10},
+       minor x tick num={1},
+       minor y tick num={1},
+       %ymin   = 0,
+       %ymax   = 400000,
+       scaled ticks = false,
+       ymajorgrids,
+       yminorgrids,
+       xmajorgrids,
+       xminorgrids,
+       legend entries={$m_t=5.5\;t$, $m_t=1.4\;t$},
+       legend style={at={(0.5,-0.2)}, anchor=north, draw=none},
+       legend cell align = left
+  ]
+    \addplot[mark=square,   mark options=solid, solid]              	table {tikz/data/mtm-cost-per-kg-cp.dat};
+    \addplot[mark=asterisk, mark options=solid, densely dashed]     	table {tikz/data/mtm-cost-per-kg-cp-low-mass.dat};    
+  
+  \end{axis}
+\end{tikzpicture}

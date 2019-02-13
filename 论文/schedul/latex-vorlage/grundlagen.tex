@@ -1,0 +1,86 @@
+\chapter{Theoretische Grundlagen}
+\label{sec:grundlagen}
+
+\section{Literaturrecherche}
+
+Zu jeder guten Arbeit gehört eine umfangreiche Literaturrecherche. Während in den ersten Gesprächen mit dem Betreuer bereits einige Tipps zu empfohlener 
+Literatur erhalten werden, ist es in den meisten Fällen notwendig, selbst nach Literatur zu suchen. Dazu bietet sich zunächst die UB an, mit der man als 
+Student bereits vertraut sein sollte. Darüber hinaus ist folgendes Vorgehen zu empfehlen:
+\begin{itemize}
+ \item Suche nach Literatur, auf die in den Referenzen bereits erhaltener Literatur verwiesen wird.
+ \item Suche bei \textit{Science Direct}, wobei zahlreiche Paper aus dem Uni-Netzwerk kostenlos heruntergeladen werden können: 
+\url{http://www.sciencedirect.com/}
+ \item Suche in digitaler Bibliothek des ILR
+\end{itemize}
+Für den letzteren Punkt wird ein Account am ILR benötigt, den man beim Betreuer beantragen kann. Die Nutzung der digitalen Bibliothek funktioniert 
+folgendermaßen:
+\begin{enumerate}
+  \item Kopiere die Datei \tb{JabRef-2.10.jar} z.B. auf deinen Desktop (oder unter Linux \tb{JabRef} nach \ts{~/bin/}.). Hier ggf. den Betreuer nach dem 
+aktuellen Pfad der Datei fragen.
+  \item Durch anklicken kann JabRef jetzt gestartet werden (oder unter Linux durch den Befehl \tb{JabRef} aus der Konsole)
+  \item Oben links befindet sich der Button zum Öffnen: \ts{Öffnen einer BibTex-Database}
+  \item Öffne die Datei \ts{/home/export/biblio/e-biblio.bib} (unter Windows ggf. das Laufwerk \ts{biblio an ILR-Server (Jupiter)} einbinden)
+  \item Die elektronische Bibliothek ist geöffnet (diese wird beim nächsten Starten von JabRef automatisch wieder geladen)
+  \item Zugriff auf die Literatur:
+  \begin{itemize}
+   \item Elektronische Literatur lässt sich direkt aus JabRef öffnen
+   \item Literatur, die nur als Buch oder Kopiervorlage existiert, kann über das Feld \ts{Note} gefunden werden, in dem die entsprechende Referenznummer 
+abgelegt ist. Hier am besten den Betreuer fragen, wo im Institut sich das Dokument dann befindet (Archiv).
+  \end{itemize}
+\end{enumerate}
+
+\section{Bewertung der Arbeit}
+
+Alle Arbeiten am ILR werden nach einem vorgegebenen Schema bewertet, so dass vorkommen kann, dass Studenten, die eine perfekte Software als Lösung
+des Problems liefern, oder etwa eine perfekte Konstruktionslösung bieten, dennoch Abzüge in der Note erhalten können,
+wenn etwa die Dokumentation Schwächen zeigt (äußere Form, \ts{roter Faden} in der Arbeit, Unvollständigkeit, etc.).
+
+Die Beurteilungskriterien sind in der folgenden Tabelle aufgelistet:
+\begin{table}[h!]
+ \centering
+ \begin{tabular}{lr}
+  Inhalt (Einführung, Theorie, Lösungsweg, Ergebnisse, Diskussion) & 50\% \\
+  Äußere Form der Arbeit & 15\% \\
+  Arbeitsweise (Eigene Ideen, Selbständigkeit, Methodik) & 30\% \\
+  Zeiteinteilung & 5\% \\
+ \end{tabular}
+
+\end{table}
+
+\section{Formelzeichen}
+
+Ein Symbol- und Abk\"urzungsverzeichnis sind, neben den bereits automatisch 
+durch diese Vorlage erstellten Tabellen- und Abbildungsverzeichnissen, zu erstellen.
+Dabei wird empfohlen, von dem Paket \tb{glossaries} Gebrauch zu machen, welches 
+ebenfalls in dieser Vorlage eingebunden ist. Hier ein paar Beispiele:
+\begin{itemize}
+ \item Ein Symbol, welches im Symbolverzeichnis auftauchen soll: \gls{symb:J2}
+ \item Eine Abk\"urzung wird beim ersten Mal ausgeschrieben: \gls{ILR} und ab dem zweiten Mal nicht mehr: \gls{ILR}
+\end{itemize}
+In Gleichungen verwendet man die Formelzeichen analog, wie an \glg{eq:beispiel} zu sehen ist:
+\begin{equation}
+ \gls{symb:E} = \gls{symb:m}\cdot \gls{symb:c}^2 \label{eq:beispiel}
+\end{equation}
+
+Zunächst werden die als Formelzeichen benutzten lateinischen bzw. deutschen Buchstaben in alphabetischer Reihenfolge geordnet, wobei
+jeweils die großen Buchstaben den kleinen voranzustellen sind. Dann in gleicher
+Reihenfolge die dem griechischen Alphabet entnommenen Symbole. Am Schluss
+sind die häufig benutzten Indizes in alphabetischer Reihenfolge anzugeben. Beinhaltet
+die Arbeit die Erstellung eines Programms oder von Teilen hierzu, so sollen die im
+Programm verwendeten Bezeichnungen den Formelzeichen zugeordnet werden. Es
+sind ausschließlich SI-Einheiten zu verwenden.
+
+Die Sortierung kann ebenfalls automatisch vorgenommen werden, indem im Symbolverzeichnis (Datei: \ts{symbolverzeichnis.tex}) jedem Eintrag der entsprechende 
+\tb{sort}-Schlüssel gegeben wird, z.B.:
+\begin{itemize}
+ \item Das Symbol \tb{c} soll im Symbolverzeichnis auftauchen. Es handelt sich um einen lateinischen Buchstaben, 
+       der Schlüssel zum Sortieren wird mit \ts{sort=xc} vergeben (Präfix \ts{x}, der gleich ersichtlich wird - s.u.).
+ \item Das Symbol \tb{$\alpha$} ist ein griechischer Buchstabe und soll erst nach den lateinischen Buchstaben kommen. 
+       Entsprechend stellt man den Schlüssel auf \ts{sort=yalpha} (Präfix \ts{y}, sodass griechische Buchstaben immer
+       nach den lateinischen Buchstaben erscheinen werden.
+\end{itemize}
+
+Existieren benötigte Herleitungen bereits in der Literatur, so ist auf diese zu verweisen. Nur zum unmittelbaren Verständnis notwendige Gleichungen sollten
+dargestellt werden. Es ist darauf zu achten, dass sonstige theoretische Herleitungen schlüssig sind (kontrollieren, ob jede Größe eindeutig definiert ist
+und keine Gedankensprünge vorhanden sind). Herleitungen soweit wie möglich mit allgemeinen Bezeichnungen durchführen, Zahlenwerte erst im Ergebnisteil (ab 
+\kap{sec:hauptteil}) einsetzen.

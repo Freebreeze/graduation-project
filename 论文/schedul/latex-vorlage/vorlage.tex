@@ -1,0 +1,192 @@
+\documentclass[%
+  a4paper,%
+  oneside,
+  nexus,
+  11pt,% <10pt, 9pt>
+  %style=screen,
+  %sender=bottom,
+  blue,% <orange, green, violet>
+  %rgb, <cmyk>
+  %mono,
+  %extramargin,
+  %marginleft, <marginright>
+  ]{tubsreprt}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[authoryear]{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}                    % Packages für Formeln
+\usepackage{amsthm}			% -||-
+\usepackage{amsfonts}			% -||-
+\usepackage{amssymb}			% -||-
+\usepackage{lscape}			% Querformatiges Beschreiben einzelner Abschnitte mit \begin{landscape} Text \end{landscape}
+
+\usepackage{tikz} 			% TikZ - ein geniales Zeichentool vor allem für Skizzen oder Schemata, Programmabläufe, etc.
+\usepackage{pgf}			% Für Tikz
+\usepackage{pgfplots} 			% Plots mit TikZ
+\usetikzlibrary{shapes,backgrounds, arrows, positioning, trees, shadows}	% Bibliotheken für Tikz
+\usepackage{pgfgantt}			% Zum Erstellen eines Gantt-Charts
+
+\graphicspath{{./graphics/}}
+
+%===============================================================
+%
+%	Hyperlinks im Dokument
+%
+%---------------------------------------
+
+\usepackage[
+  pdftex,%
+  hidelinks,%
+  linktocpage, breaklinks
+]{hyperref}				% Package für Lesezeichen und Verlinkungen
+
+%===============================================================
+%
+%	Glossary
+%
+%---------------------------------------
+
+\usepackage[nonumberlist,acronym,section]{glossaries}
+	%nonumberlist: no page numbering
+	%acronym: abbreviations list
+	%toc: entry in table of contents
+	%section: in toc placed at section level
+	%nopostdot: no dots after description
+				
+\newglossary[slg1]{symbolslist}{syi}{syg}{List of Symbols}			% symbols
+\newglossary[alg]{acronymlist}{acr}{acn}{List of Abbreviations}			% abbreviations	
+
+\makeglossaries
+
+\AtEndDocument{\glsaddall}	%füge alle Symbole dem Verzeichnis zu
+
+%-----------------------------------------------------------------
+
+
+%Makros für eine erleichterte Eingabe wiederkehrender Befehle:
+\newcommand{\abb}[1]{Abbildung~\ref{#1}}
+\newcommand{\tab}[1]{Tabelle~\ref{#1}}
+\newcommand{\glg}[1]{Gleichung~\ref{#1}}
+\newcommand{\kap}[1]{Kapitel~\ref{#1}}
+\newcommand{\abschn}[1]{Abschnitt~\ref{#1}}
+\newcommand{\anh}[1]{Anhang~\ref{#1}}
+
+\newcommand{\ul}{\underline}
+\newcommand{\ol}{\overline}
+\newcommand{\tb}{\textbf}
+\newcommand{\ts}{\textsl}
+
+\newcommand{\kalman}{\textsc{Kalman}-Filter }
+
+%===============================================================
+%
+% Farben
+%
+%-------------------------------
+
+\definecolor{ilr-blue}{RGB}{44,79,162}
+\definecolor{light-blue}{RGB}{220,220,255}
+\definecolor{gray90}{gray}{0.9}
+\definecolor{gray80}{gray}{0.8}
+\definecolor{gray60}{gray}{0.6}
+\definecolor{gray50}{gray}{0.5}
+\definecolor{gray40}{gray}{0.4}
+\definecolor{gray20}{gray}{0.2}
+
+%===============================================================
+%
+% Titelseiten-Elemente
+%
+%-------------------------------
+
+\title{\LARGE R XXXX X (beim Betreuer beantragen!) \newline Titel der Arbeit}
+\subtitle{Institut f\"ur Raumfahrtsysteme}
+\author{Max Mustermann}
+
+%---------------------------------------------------------------
+
+\logo{\includegraphics{iraslogo_deutsch.png}} % ilrlogo_englisch.png
+\titlepicture{doctor_pop2009.jpg}
+
+%===============================================================
+%
+% Hurenkinder/Schusterjungen vermeiden
+%
+\clubpenalty         = 10000
+\widowpenalty        = 10000
+\displaywidowpenalty = 10000
+
+%---------------------------------------------------------------------------------------------------
+
+
+\begin{document}
+
+  \maketitle[image] %[<plain/image/imagetext>,<logo=left/right>]
+
+  \include{aufgabenstellung}
+  \include{eid}
+  \include{abstract}
+  \tableofcontents
+  \newpage
+   \glossarystyle{altlong4col}%
+    \setlength{\glsdescwidth}{0.7\textwidth}
+  \include{symbolverzeichnis}
+  \include{abkverzeichnis} 
+  
+  \include{einleitung}
+  \include{grundlagen}
+  \include{hauptteil}
+  \include{ergebnisse}
+  \include{zusammenfassung}
+  \include{ausblick}
+
+  %===================================================
+  %
+  % Literaturverzeichnis
+  %
+  %---------------------------------------------------
+  \addcontentsline{toc}{chapter}{Literaturverzeichnis}
+    \bibliographystyle{elsarticle-harv}
+    \bibliography{literatur}
+  
+  %===================================================
+  %
+  % Abbildungsverzeichnis
+  %
+  %---------------------------------------------------
+  \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+  \listoffigures
+  \newpage
+  
+  %===================================================
+  %
+  % Tabellenverzeichnis
+  %
+  %---------------------------------------------------
+  \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+  \listoftables							% Tabellenverzeichnis
+  \newpage
+  
+  %===================================================
+  %
+  % Symbol- und Abkürzungsverzeichnis
+  %
+  %---------------------------------------------------
+  \chapter*{Symbolverzeichnis}						% Symbolverzeichnis
+    \addcontentsline{toc}{chapter}{Symbolverzeichnis}			% fügt Symbolverzeichnis trotz * in das Inhaltsverzeichnis ein
+          \printglossary[type=symbolslist, title=Symbole und Indizes]		% symbols
+    \printglossary[type=acronymlist, title=Abk\"urzungen]		% abbreviations
+ \glsaddall 
+  %===================================================
+  %
+  % Anhang
+  %
+  %---------------------------------
+  \begin{appendix}
+    \include{projekt}
+    %\include{WEITERER ANHANG}
+  \end{appendix}
+
+\end{document}
