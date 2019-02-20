@@ -19,7 +19,7 @@
 \contentsline {chapter}{Abbildungsverzeichnis}{19}{chapter.6}
 \contentsline {chapter}{Tabellenverzeichnis}{20}{chapter*.5}
 \contentsline {chapter}{Symbolverzeichnis}{21}{chapter*.7}
-\contentsline {chapter}{\numberline {A}Projekt Management}{22}{appendix.A}
+\contentsline {chapter}{\numberline {A}Project Management}{22}{appendix.A}
 \contentsline {section}{\numberline {A.1}Work Breakdown Structure}{22}{section.A.1}
 \contentsline {section}{\numberline {A.2}Zeitplan}{24}{section.A.2}
 \contentsline {section}{\numberline {A.3}Work Package Description}{26}{section.A.3}
