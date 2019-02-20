@@ -1,0 +1,390 @@
+\ifglsentryexists{symb:c}{}%
+{%
+\gls@defglossaryentry{symb:c}%
+{%
+name={\ensuremath {c}},%
+sort={xc},%
+type={symbolslist},%
+first={\protect \ensuremath {c}},%
+firstplural={\protect \ensuremath {c}s},%
+text={\protect \ensuremath {c}},%
+plural={\protect \ensuremath {c}s},%
+description={Lichtgeschwindigkeit im Vakuum, \ensuremath {c=299.792.458\; \frac {m}{s}}},%
+descriptionplural={Lichtgeschwindigkeit im Vakuum, \ensuremath {c=299.792.458\; \frac {m}{s}}},%
+symbol={\ensuremath {\frac {m}{s}}},%
+symbolplural={\ensuremath {\frac {m}{s}}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{symb:g}{}%
+{%
+\gls@defglossaryentry{symb:g}%
+{%
+name={\ensuremath {g}},%
+sort={xg},%
+type={symbolslist},%
+first={\protect \ensuremath {g}},%
+firstplural={\protect \ensuremath {g}s},%
+text={\protect \ensuremath {g}},%
+plural={\protect \ensuremath {g}s},%
+description={Erdbeschleunigung},%
+descriptionplural={Erdbeschleunigung},%
+symbol={\ensuremath {\frac {m}{s^{2}}}},%
+symbolplural={\ensuremath {\frac {m}{s^{2}}}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{symb:m}{}%
+{%
+\gls@defglossaryentry{symb:m}%
+{%
+name={\ensuremath {m}},%
+sort={xm},%
+type={symbolslist},%
+first={\protect \ensuremath {m}},%
+firstplural={\protect \ensuremath {m}s},%
+text={\protect \ensuremath {m}},%
+plural={\protect \ensuremath {m}s},%
+description={Masse},%
+descriptionplural={Masse},%
+symbol={\ensuremath {kg}},%
+symbolplural={\ensuremath {kg}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{symb:E}{}%
+{%
+\gls@defglossaryentry{symb:E}%
+{%
+name={\ensuremath {E}},%
+sort={xE},%
+type={symbolslist},%
+first={\protect \ensuremath {E}},%
+firstplural={\protect \ensuremath {E}s},%
+text={\protect \ensuremath {E}},%
+plural={\protect \ensuremath {E}s},%
+description={Energie},%
+descriptionplural={Energie},%
+symbol={\ensuremath {J}},%
+symbolplural={\ensuremath {J}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{symb:J2}{}%
+{%
+\gls@defglossaryentry{symb:J2}%
+{%
+name={\ensuremath {J_{2}}},%
+sort={xJ2},%
+type={symbolslist},%
+first={\protect \ensuremath {J_{2}}},%
+firstplural={\protect \ensuremath {J_{2}}s},%
+text={\protect \ensuremath {J_{2}}},%
+plural={\protect \ensuremath {J_{2}}s},%
+description={Koeffizient f\"ur die Abplattung der Erde},%
+descriptionplural={Koeffizient f\"ur die Abplattung der Erde},%
+symbol={\ensuremath {}},%
+symbolplural={\ensuremath {}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{symb:OmegaE}{}%
+{%
+\gls@defglossaryentry{symb:OmegaE}%
+{%
+name={\ensuremath {\Omega _{E}}},%
+sort={yOmegaE},%
+type={symbolslist},%
+first={\protect \ensuremath {\Omega _{E}}},%
+firstplural={\protect \ensuremath {\Omega _{E}}s},%
+text={\protect \ensuremath {\Omega _{E}}},%
+plural={\protect \ensuremath {\Omega _{E}}s},%
+description={Winkelgeschwindigkeit der Erde},%
+descriptionplural={Winkelgeschwindigkeit der Erde},%
+symbol={\ensuremath {\frac {rad}{s}}},%
+symbolplural={\ensuremath {\frac {rad}{s}}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{symb:rho}{}%
+{%
+\gls@defglossaryentry{symb:rho}%
+{%
+name={\ensuremath {\rho }},%
+sort={yrho},%
+type={symbolslist},%
+first={\protect \ensuremath {\rho }},%
+firstplural={\protect \ensuremath {\rho }s},%
+text={\protect \ensuremath {\rho }},%
+plural={\protect \ensuremath {\rho }s},%
+description={Dichte},%
+descriptionplural={Dichte},%
+symbol={\ensuremath {kg/m^{3}}},%
+symbolplural={\ensuremath {kg/m^{3}}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Index:min}{}%
+{%
+\gls@defglossaryentry{Index:min}%
+{%
+name={\ensuremath {min}},%
+sort={zmin},%
+type={symbolslist},%
+first={\protect \ensuremath {min}},%
+firstplural={\protect \ensuremath {min}s},%
+text={\protect \ensuremath {min}},%
+plural={\protect \ensuremath {min}s},%
+description={Minimalwert},%
+descriptionplural={Minimalwert},%
+symbol={\ensuremath {}},%
+symbolplural={\ensuremath {}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Index:max}{}%
+{%
+\gls@defglossaryentry{Index:max}%
+{%
+name={\ensuremath {max}},%
+sort={zmax},%
+type={symbolslist},%
+first={\protect \ensuremath {max}},%
+firstplural={\protect \ensuremath {max}s},%
+text={\protect \ensuremath {max}},%
+plural={\protect \ensuremath {max}s},%
+description={Maximalwert},%
+descriptionplural={Maximalwert},%
+symbol={\ensuremath {}},%
+symbolplural={\ensuremath {}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{DLR}{}%
+{%
+\gls@defglossaryentry{DLR}%
+{%
+name={DLR},%
+sort={DLR},%
+type={acronym},%
+first={Deutsches Zentrum f\"ur Luft- und Raumfahrt\glsspace (DLR)},%
+firstplural={Deutsches Zentrum f\"ur Luft- und Raumfahrts\glsspace (DLRs)},%
+text={DLR},%
+plural={DLRs},%
+description={Deutsches Zentrum f\"ur Luft- und Raumfahrt},%
+descriptionplural={Deutsches Zentrum f\"ur Luft- und Raumfahrt\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Deutsches Zentrum f\"ur Luft- und Raumfahrt},%
+longplural={Deutsches Zentrum f\"ur Luft- und Raumfahrts},%
+short={DLR},%
+shortplural={DLRs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ILR}{}%
+{%
+\gls@defglossaryentry{ILR}%
+{%
+name={ILR},%
+sort={ILR},%
+type={acronym},%
+first={Institut f\"ur Luft- und Raumfahrtsysteme\glsspace (ILR)},%
+firstplural={Institut f\"ur Luft- und Raumfahrtsystemes\glsspace (ILRs)},%
+text={ILR},%
+plural={ILRs},%
+description={Institut f\"ur Luft- und Raumfahrtsysteme},%
+descriptionplural={Institut f\"ur Luft- und Raumfahrtsysteme\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Institut f\"ur Luft- und Raumfahrtsysteme},%
+longplural={Institut f\"ur Luft- und Raumfahrtsystemes},%
+short={ILR},%
+shortplural={ILRs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ERIG}{}%
+{%
+\gls@defglossaryentry{ERIG}%
+{%
+name={ERIG},%
+sort={ERIG},%
+type={acronym},%
+first={ExperimentalRaumfahrt - InteressenGemeinschaft e.V.\glsspace (ERIG)},%
+firstplural={ExperimentalRaumfahrt - InteressenGemeinschaft e.V.s\glsspace (ERIGs)},%
+text={ERIG},%
+plural={ERIGs},%
+description={ExperimentalRaumfahrt - InteressenGemeinschaft e.V.},%
+descriptionplural={ExperimentalRaumfahrt - InteressenGemeinschaft e.V.\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={ExperimentalRaumfahrt - InteressenGemeinschaft e.V.},%
+longplural={ExperimentalRaumfahrt - InteressenGemeinschaft e.V.s},%
+short={ERIG},%
+shortplural={ERIGs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{STERN}{}%
+{%
+\gls@defglossaryentry{STERN}%
+{%
+name={\textsc {STERN}},%
+sort={\textsc {STERN}},%
+type={acronym},%
+first={Studentische Experimentalraketen\glsspace (\protect \textsc {STERN})},%
+firstplural={Studentische Experimentalraketens\glsspace (\protect \textsc {STERN}s)},%
+text={\protect \textsc {STERN}},%
+plural={\protect \textsc {STERN}s},%
+description={Studentische Experimentalraketen},%
+descriptionplural={Studentische Experimentalraketen\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Studentische Experimentalraketen},%
+longplural={Studentische Experimentalraketens},%
+short={\protect \textsc {STERN}},%
+shortplural={\protect \textsc {STERN}s},%
+counter={page},%
+parent={},%
+%
+}%
+}%
